@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Forja Pro - Webpage
 
-## Getting Started
+![Forja Banner](./public/images/capybara-bs.png)
 
-First, run the development server:
+Welcome to the repository of Forja Pro's Webpage!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Forja is a platform that aims to help programmers in a Discord community to enhance their skills, share knowledge, and collaborate on projects. This is the official implementation of the Forja Pro Webpage, built with Next.js, Tailwind CSS, and Storybook.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**: A React framework with server-side rendering (SSR) and static site generation (SSG) support.
+- **Tailwind CSS**: A highly customizable CSS utility library that allows for rapid development of modern and responsive interfaces.
+- **Storybook**: A development environment for isolated components, enabling you to create, view, and test each project component interactively.
 
-## Learn More
+## Running the Project
 
-To learn more about Next.js, take a look at the following resources:
+Make sure you have Node.js and npm (or yarn) installed on your machine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone this repository to your local environment using the following command:
+   git clone https://github.com/your-username/forja-pro-webpage.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Navigate to the project directory:
+   cd mjo-forja-webpage
 
-## Deploy on Vercel
+3. Install the project dependencies:
+   yarn or npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Start the development server:
+   yarn dev or npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Access the application in your browser through the URL: `http://localhost:3000`
+
+## Storybook
+
+To view and test individual components, you can start the Storybook environment:
+yarn storybook or npm run storybook
+
+Access Storybook in your browser through the URL: `http://localhost:6006`
+
+## Contributing
+
+Feel free to submit suggestions, report issues, or contribute code to enhance the Forja Webpage.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+Thank you for your interest in Forja Community! We hope this platform becomes a valuable resource and inspires a collaborative community of learning and growth for programmers. Your participation is crucial in making this vision a reality.
+
+For more information about the Forja project, visit our [official website](https://forja.com) or join our [Discord community](https://discord.gg/HyzQcqKQ).
+
+Let's forge knowledge and friendships together! 🛠️🚀
