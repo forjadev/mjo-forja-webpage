@@ -19,7 +19,7 @@ Forja is a platform that aims to help programmers in a Discord community to enha
 Make sure you have Node.js and npm (or yarn) installed on your machine.
 
 1. Clone this repository to your local environment using the following command:
-   git clone https://github.com/your-username/forja-pro-webpage.git
+   git clone https://github.com/forjadev/mjo-forja-webpage
 
 2. Navigate to the project directory:
    cd mjo-forja-webpage
