@@ -1,7 +1,13 @@
-import Image from 'next/image'
+import CommunityCard from "@/components/CommunityCard/CommunityCard";
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    <div>
+      <CommunityCard
+        icon= "/focus.svg"
+        title="Foco"
+        paragraph="Permanecemos constantemente empenhados em ampliar nossos horizontes e perseguir metas ambiciosas para alcançar novos patamares de sucesso."
+      />
+    </div>
   )
 }
