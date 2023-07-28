@@ -1,3 +1,1 @@
-import Navigation from './Navigation';
-
-export { Navigation as Navbar };
+export { Navbar } from "./Navbar"
