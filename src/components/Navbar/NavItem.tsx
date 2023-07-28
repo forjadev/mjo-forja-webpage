@@ -1,9 +1,12 @@
+import Link from "next/link"
+
 interface NavItemProps {
   children: React.ReactNode
   isActive?: boolean
+  href: string
 }
 
-export const NavItem = ({ children, isActive }: NavItemProps) => {
+export const NavItem = ({ children, isActive, href }: NavItemProps) => {
   return (
     <li
       className={`px-4 py-3 cursor-pointer hover:text-[#C8FBEE] transition-all
@@ -14,7 +17,7 @@ export const NavItem = ({ children, isActive }: NavItemProps) => {
     }
   `}
     >
-      {children}
+      <Link href={href}>{children}</Link>
     </li>
   )
 }
