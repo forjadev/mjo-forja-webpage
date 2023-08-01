@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 
-# npm litter
-package-lock.json
+# use npm instead
+yarn.lock
 
 # testing
 /coverage
