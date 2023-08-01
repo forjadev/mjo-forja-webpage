@@ -1,4 +1,5 @@
 import React from "react"
+import { twMerge } from "tailwind-merge"
 
 const base = {
   style: `inline-flex items-center justify-center font-bold rounded-md transition-all ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none`,
@@ -29,6 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "lg",
       handler,
       children,
+      className,
       ...props
     }: ButtonProps,
     ref,
@@ -37,7 +39,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         {...props}
-        className={`${variants.style[variant]} ${variants.size[size]}`}
+        className={twMerge(
+          variants.style[variant],
+          variants.size[size],
+          className,
+        )}
         onClick={handler}
       >
         {children}
