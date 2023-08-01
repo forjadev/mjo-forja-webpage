@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# use npm instead
+yarn.lock
+
 # testing
 /coverage
 
