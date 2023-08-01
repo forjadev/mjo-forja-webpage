@@ -1,17 +1,27 @@
 import React from "react"
 
+const base = {
+  style: `text-2xl font-bold px-8 py-4 rounded-md transition-all ease-out cursor-pointer`,
+}
+
+const variants = {
+  style: {
+    callers: `${base.style} border-2 border-[#3ADBC8] hover:bg-[#3ADBC8] hover:text-[#202036]`,
+    info: `${base.style} text-[#202036] bg-[#FBB361] hover:bg-[#FF9F2F]`,
+  },
+}
+
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  primary?: boolean
+  variant?: keyof typeof variants.style
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ primary, children, ...props }: ButtonProps, ref) => {
+  ({ variant = "callers", children, ...props }: ButtonProps, ref) => {
     return (
       <button
         ref={ref}
         {...props}
-        className='
-  text-2xl font-bold px-8 py-4 rounded-md border-2 border-[#3ADBC8] hover:bg-[#3ADBC8] hover:text-[#202036] transition-all ease-out cursor-pointer'
+        className={variants.style[variant]}
         onClick={() => alert("Vamos Nessa!")}
       >
         {children}
