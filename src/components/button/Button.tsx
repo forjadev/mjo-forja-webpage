@@ -11,9 +11,9 @@ const variants = {
     info: `${base.style} text-[#202036] bg-[#FBB361] hover:bg-[#FF9F2F] focus:ring-[#202036]`,
   },
   size: {
-    sm: `px-4 py-2 text-sm`,
-    md: `px-6 py-3 text-lg`,
-    lg: `px-8 py-4 text-2xl`,
+    sm: `px-4 py-2 text-sm gap-2`,
+    md: `px-6 py-3 text-lg gap-3`,
+    lg: `px-8 py-4 text-2xl gap-4`,
   },
 }
 
