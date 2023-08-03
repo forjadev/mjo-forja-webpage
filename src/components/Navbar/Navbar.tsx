@@ -1,23 +1,16 @@
 import { NavItem } from "./NavItem"
 
-interface NavbarProps {
-  children?: React.ReactNode
-}
-
-// NavLink to do: add a link tag
-export const Navbar = ({ children }: NavbarProps) => {
+const Navbar = () => {
   return (
-    <nav className="flex items-center border border-[#43485F] rounded-full bg-[#221E1E]/50 shadow-[0_4px_4px_#45A6AA1A]">
-      <ul className="flex gap-10 px-4 py-2 text-[#D9E0EE] capitalize">
-        <NavItem href="#" isActive>
-          inicio
-        </NavItem>
-        <NavItem href="#">sobre</NavItem>
-        <NavItem href="#">conteúdos</NavItem>
-        <NavItem href="#">
-          seja <span className="text-orange-600 font-black uppercase">pro</span>
-        </NavItem>
+    <nav className="px-8 py-4 border border-[#43485F] rounded-full bg-[#221E1E]/50 shadow-lg shadow-[#45A6AA]/5">
+      <ul className="flex gap-10 text-[#D9E0EE]">
+        <NavItem textPrimary="Início" href="/" isActive={true} />
+        <NavItem textPrimary="Sobre" href="#" />
+        <NavItem textPrimary="Conteúdos" href="#" />
+        <NavItem textPrimary="Seja" textSecondary="pro" href="#" />
       </ul>
     </nav>
   )
 }
+
+export default Navbar
