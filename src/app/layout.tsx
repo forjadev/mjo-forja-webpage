@@ -6,7 +6,7 @@ import { DM_Sans, Space_Grotesk } from "next/font/google"
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
-  weight: "700",
+  weight: ["300", "400", "700"],
   style: "normal",
 })
 
