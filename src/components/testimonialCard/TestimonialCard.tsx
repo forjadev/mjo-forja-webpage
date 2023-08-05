@@ -24,9 +24,11 @@ const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
       <div
         ref={ref}
         {...props}
-        className="bg-[#1F2025] w-96 h-56 py-5 px-6 border border-[#3B667080/50] rounded-lg"
+        className="bg-surface-secondary w-96 h-56 py-5 px-6 border border-moss-light dark:border-moss-dark rounded-lg"
       >
-        <div className="font-body font-normal text-[#D9E0EE] w-80 h-32">{description}</div>
+        <div className="font-body font-normal text-on-primary w-80 h-32">
+          {description}
+        </div>
 
         <div className="flex items-center gap-3">
           <Link href={`${profileLink}`}>
@@ -39,7 +41,7 @@ const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
             />
           </Link>
 
-          <div className="font-display text-[#D9E0EE]">
+          <div className="font-display text-on-primary">
             <p className="text-2xl font-normal">{name}</p>
             <p className="font-light">{occupation}</p>
           </div>
