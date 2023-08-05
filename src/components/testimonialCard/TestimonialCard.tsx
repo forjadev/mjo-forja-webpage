@@ -1,10 +1,6 @@
 import { HTMLAttributes, forwardRef } from "react";
-import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-
-const dmSans = DM_Sans({ subsets: ["latin"], weight: "400" });
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 
 interface TestimonialCardProps extends HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -30,9 +26,7 @@ const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
         {...props}
         className="bg-[#1F2025] w-96 h-56 py-5 px-6 border border-[#3B667080/50] rounded-lg"
       >
-        <div className={`${dmSans.className} text-[#D9E0EE] w-80 h-32`}>
-          {description}
-        </div>
+        <div className="font-body font-normal text-[#D9E0EE] w-80 h-32">{description}</div>
 
         <div className="flex items-center gap-3">
           <Link href={`${profileLink}`}>
@@ -45,7 +39,7 @@ const TestimonialCard = forwardRef<HTMLDivElement, TestimonialCardProps>(
             />
           </Link>
 
-          <div className={`${spaceGrotesk.className} text-[#D9E0EE]`}>
+          <div className="font-display text-[#D9E0EE]">
             <p className="text-2xl font-normal">{name}</p>
             <p className="font-light">{occupation}</p>
           </div>
