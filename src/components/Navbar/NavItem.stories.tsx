@@ -1,45 +1,45 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { NavItem } from './NavItem'
+import type { Meta, StoryObj } from "@storybook/react";
+import { NavItem } from "./NavItem";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 const meta = {
   component: NavItem,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
   decorators: [
     (Story) => (
-      <ul className="flex gap-10 text-[#D9E0EE]">
-        {Story()}
-      </ul>
+      <NavigationMenu.Root>
+        <NavigationMenu.List>{Story()}</NavigationMenu.List>
+      </NavigationMenu.Root>
     ),
   ],
-  tags: ['autodocs']
-} satisfies Meta<typeof NavItem>
+  tags: ["autodocs"],
+} satisfies Meta<typeof NavItem>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    textPrimary: 'Default',
-    href: '/',
-    isActive: false
-  }
-}
+    textPrimary: "Default",
+    href: "/",
+  },
+};
 
 export const Active: Story = {
   args: {
-    textPrimary: 'Active',
-    href: '/',
-    isActive: true
-  }
-}
+    textPrimary: "Active",
+    href: "/",
+    variant: "isActive",
+  },
+};
 
 export const ActiveWithTextSecondary: Story = {
   args: {
-    textPrimary: 'Active',
-    textSecondary: 'Secondary',
-    href: '/',
-    isActive: true
-  }
-}
+    textPrimary: "Active",
+    textSecondary: "Secondary",
+    href: "/",
+    variant: "isActive",
+  },
+};
