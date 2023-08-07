@@ -1,35 +1,45 @@
-import Link from "next/link"
-import { HtmlHTMLAttributes, forwardRef } from "react"
+import { cn } from "../../lib/utils";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { cva, VariantProps } from "class-variance-authority";
+import { forwardRef } from "react";
 
-interface NavItemProps extends HtmlHTMLAttributes<HTMLAnchorElement> {
-  textPrimary: string
-  textSecondary?: string
-  href: string
-  isActive?: boolean
+export interface NavItemProps extends VariantProps<typeof navItemVariants> {
+  textPrimary: string;
+  textSecondary?: string;
+  href: string;
 }
 
-export const NavItem = forwardRef<HTMLAnchorElement, NavItemProps>(({ 
-  textPrimary = "Default", 
-  textSecondary, 
-  isActive = false,
-  href,
-  ...props }: NavItemProps) => {
-  return (
-    <li>
-      <Link 
-        className={`text-xl text-[#D9E0EE] capitalize px-[0.875rem] py-2 cursor-pointer hover:opacity-80 
-        ${isActive ? 'text-[#191B21] font-bold rounded-full bg-gradient-to-br from-[#3ADBC8] to-[#1E82BA]' : ''}`} 
-        href={href} as={href}
-        {...props}
-      >
+const navItemVariants = cva(
+  "text-xl text-on-primary capitalize px-[0.875rem] py-2 cursor-pointer hover:opacity-80",
+  {
+    variants: {
+      variant: {
+        isActive:
+          "text-surface-primary font-bold rounded-full bg-gradient-to-br from-dev-primary to-dev-secondary",
+      },
+    },
+  }
+);
+
+export const NavItem = forwardRef<HTMLAnchorElement, NavItemProps>(
+  (
+    { textPrimary = "Default", textSecondary, variant, href } /// <reference path="" />
+  ) => {
+    return (
+      <NavigationMenu.Item>
+        <NavigationMenu.Link
+          className={cn(navItemVariants({ variant }))}
+          href={href}
+        >
           {textPrimary}
-          {textSecondary && 
-          <span className="text-[#FF8139] font-bold uppercase pl-1">
-            {textSecondary}
-          </span>}
-      </Link>
-    </li>
-  )
-}
-)
-NavItem.displayName = "NavItem"
+          {textSecondary && (
+            <span className="text-[#FF8139] font-bold uppercase pl-1">
+              {textSecondary}
+            </span>
+          )}
+        </NavigationMenu.Link>
+      </NavigationMenu.Item>
+    );
+  }
+);
+NavItem.displayName = "NavItem";

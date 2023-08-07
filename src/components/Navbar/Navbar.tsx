@@ -1,16 +1,34 @@
-import { NavItem } from "./NavItem"
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { NavItem, NavItemProps } from "./NavItem";
+
+const menuitems: NavItemProps[] = [
+  {
+    textPrimary: "Inicio",
+    href: "#",
+    variant: "isActive",
+  },
+  {
+    textPrimary: "Sobre",
+    href: "#",
+  },
+];
 
 const Navbar = () => {
   return (
-    <nav className="px-8 py-4 border border-[#43485F] rounded-full bg-[#221E1E]/50 shadow-lg shadow-[#45A6AA]/5">
-      <ul className="flex gap-10 text-[#D9E0EE]">
-        <NavItem textPrimary="Início" href="/" isActive={true} />
-        <NavItem textPrimary="Sobre" href="#" />
-        <NavItem textPrimary="Conteúdos" href="#" />
-        <NavItem textPrimary="Seja" textSecondary="pro" href="#" />
-      </ul>
-    </nav>
-  )
-}
+    <NavigationMenu.Root className="px-4 py-4 border border-metal-light rounded-full bg-surface-secondary-light/80 dark:bg-surface-secondary/50 shadow-lg shadow-[#45A6AA]/5">
+      <NavigationMenu.List className="flex gap-10">
+        {menuitems.map((item) => (
+          <NavItem
+            key={item.href}
+            textPrimary={item.textPrimary}
+            textSecondary={item.textSecondary}
+            href={item.href}
+            variant={item.variant}
+          />
+        ))}
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
+  );
+};
 
-export default Navbar
+export default Navbar;
