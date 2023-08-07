@@ -5,8 +5,10 @@
 /.pnp
 .pnp.js
 
-# use npm instead
+# we'll ignore the lockfiles until a stable release is made
 yarn.lock
+package-lock.json
+pnpm-lock.yaml
 
 # testing
 /coverage

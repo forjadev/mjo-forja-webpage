@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components"
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       rounded-xl ring-1 ring-metal-dark'
       >
         <div className='flex gap-4'>
-          <Button size='sm' variant='callers'>
+          <Button size='sm' variant='callers' onClick={() => alert("Do Botão")}>
             Botão Caller
           </Button>
           <Button size='md' variant='callers'>
