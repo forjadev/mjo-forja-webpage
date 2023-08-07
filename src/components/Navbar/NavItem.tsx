@@ -22,14 +22,13 @@ const navItemVariants = cva(
 );
 
 export const NavItem = forwardRef<HTMLAnchorElement, NavItemProps>(
-  (
-    { textPrimary = "Default", textSecondary, variant, href } /// <reference path="" />
-  ) => {
+  ({ textPrimary = "Default", textSecondary, variant, href }, ref) => {
     return (
       <NavigationMenu.Item>
         <NavigationMenu.Link
           className={cn(navItemVariants({ variant }))}
           href={href}
+          ref={ref}
         >
           {textPrimary}
           {textSecondary && (
