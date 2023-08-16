@@ -9,6 +9,9 @@
   .bg-surface-secondary {
     @apply bg-surface-secondary-light dark:bg-surface-secondary-dark;
   }
+  .bg-surface-metal {
+    @apply bg-surface-metal-light dark:bg-surface-metal-dark;
+  }
   .text-on-primary {
     @apply text-on-primary-light dark:text-on-primary-dark;
   }
