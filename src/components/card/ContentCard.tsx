@@ -14,12 +14,12 @@ const ContentCard = ({ imgSrc = '/images/contentCardDefault.png', title, descrip
       className="
       w-72 max-w-[281px] h-auto min-h-[387px] md:w-[28rem] md:max-w-[450px] md:min-h-[477px] 
       rounded-lg border-2 overflow-hidden
-    border-surface-metal-dark bg-surface-secondary-dark"
+    border-surface-metal-dark bg-surface-secondary-dark dark:border-surface-metal-light dark:bg-surface-secondary-light"
     >
       <div className="w-full h-52 md:h-64 relative">
         <Image src={imgSrc} alt={title} fill objectFit='cover'/>
       </div>
-      <div className="p-4 md:p-8 text-surface-primary-light">
+      <div className="p-4 md:p-8 text-surface-primary-light dark:text-surface-primary-dark">
         <div className="flex flex-col items-start gap-3 md:flex-row md:items-center">
           <h4 className="text-3xl md:text-5xl font-bold leading-4 font-display">
             {title}
