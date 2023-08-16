@@ -9,8 +9,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         callers:
-          "text-on-primary border-2 border-dev-secondary hover:bg-dev-secondary hover:text-on-neutral focus:ring-dev-secondary dark:border-dev-primary dark:hover:bg-dev-primary dark:focus:ring-dev-primary",
-        info: "text-on-neutral-dark bg-pro-primary hover:bg-pro-secondary focus:ring-on-neutral-dark",
+          "text-on-primary border-2 border-palette-blue-600 hover:bg-palette-blue-600 hover:text-on-neutral focus:ring-palette-blue-600 dark:border-palette-turquoise-400 dark:hover:bg-palette-turquoise-400 dark:focus:ring-palette-turquoise-400",
+        info: "text-on-neutral-dark bg-palette-orange-300 hover:bg-palette-orange-500 focus:ring-on-neutral-dark",
       },
       size: {
         sm: "px-4 py-2 text-sm gap-2",

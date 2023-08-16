@@ -2,36 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .bg-surface-primary {
     @apply bg-surface-primary-light dark:bg-surface-primary-dark;
   }
   .bg-surface-secondary {
     @apply bg-surface-secondary-light dark:bg-surface-secondary-dark;
+  }
+  .bg-surface-metal {
+    @apply bg-surface-metal-light dark:bg-surface-metal-dark;
   }
   .text-on-primary {
     @apply text-on-primary-light dark:text-on-primary-dark;
@@ -42,4 +21,9 @@ body {
   .text-on-neutral {
     @apply text-on-neutral-light dark:text-on-neutral-dark;
   }
+}
+
+/* Storybook Theme Fix */
+.sb-show-main {
+  @apply bg-surface-primary-light dark:bg-surface-primary-dark !important;
 }
