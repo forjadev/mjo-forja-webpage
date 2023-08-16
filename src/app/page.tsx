@@ -8,7 +8,7 @@ export default function Home() {
       <div
         className="flex flex-col items-center justify-center gap-36 w-3/4 h-2/3
       bg-surface-secondary
-      rounded-xl ring-1 ring-metal-dark"
+      rounded-xl ring-1 ring-surface-metal-dark"
       ></div>
     </main>
   )
