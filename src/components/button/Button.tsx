@@ -8,9 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        callers:
-          "text-on-primary border-2 border-palette-blue-600 hover:bg-palette-blue-600 hover:text-on-neutral focus:ring-palette-blue-600 dark:border-palette-turquoise-400 dark:hover:bg-palette-turquoise-400 dark:focus:ring-palette-turquoise-400",
-        info: "text-on-neutral-dark bg-palette-orange-300 hover:bg-palette-orange-500 focus:ring-on-neutral-dark",
+        default:
+          "text-on-primary-dark bg-surface-metal-dark hover:bg-surface-secondary-dark focus:ring-surface-metal-dark dark:text-on-primary-light dark:bg-surface-metal-light dark:hover:bg-surface-secondary-light dark:focus:ring-surface-metal-light",
       },
       size: {
         sm: "px-4 py-2 text-sm gap-2",
@@ -19,8 +18,8 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "callers",
-      size: "lg",
+      variant: "default",
+      size: "md",
     },
   },
 )
