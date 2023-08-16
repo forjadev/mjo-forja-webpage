@@ -4,7 +4,7 @@ import { cva, VariantProps } from "class-variance-authority"
 import React from "react"
 
 const buttonVariants = cva(
-  "font-display inline-flex items-center justify-center font-bold rounded-md transition-all ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+  "font-display inline-flex items-center justify-center font-bold rounded-md transition-all ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
@@ -12,6 +12,8 @@ const buttonVariants = cva(
           "text-on-primary-dark bg-surface-metal-dark hover:bg-surface-secondary-dark focus:ring-surface-metal-dark dark:text-on-primary-light dark:bg-surface-metal-light dark:hover:bg-surface-secondary-light dark:focus:ring-surface-metal-light",
         neutral:
           "text-on-neutral-dark bg-on-neutral-light hover:bg-surface-metal-light focus:ring-on-neutral-light dark:text-on-neutral-light dark:bg-surface-metal-dark dark:hover:bg-on-primary-light dark:focus:ring-surface-metal-dark",
+        ghost:
+          "text-on-neutral-dark bg-transparent hover:bg-surface-primary-dark hover:bg-opacity-10 focus:ring-surface-primary-dark/10 dark:text-on-neutral-light dark:hover:bg-surface-primary-light dark:hover:bg-opacity-10 dark:focus:ring-surface-primary-light/10",
       },
       size: {
         sm: "px-4 py-2 text-sm gap-2",
