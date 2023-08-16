@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en' className=''>
+    <html lang="en" className="bg-surface-primary">
       <body className={`${space_grotesk.variable} ${dm_sans.variable}`}>
         {children}
       </body>
