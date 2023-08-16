@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "text-on-neutral-dark bg-transparent hover:bg-surface-primary-dark hover:bg-opacity-10 focus:ring-surface-primary-dark/10 dark:text-on-neutral-light dark:hover:bg-surface-primary-light dark:hover:bg-opacity-10 dark:focus:ring-surface-primary-light/10",
         primary: "text-on-primary-light bg-palette-cyan-300 hover:bg-palette-cyan-400 focus:ring-palette-cyan-300",
         secondary: "text-on-neutral-dark bg-palette-purple-400 hover:bg-palette-purple-500 focus:ring-palette-purple-400 dark:text-on-neutral-light dark:bg-palette-purple-500 dark:hover:bg-palette-purple-600 dark:focus:ring-palette-purple-500",
-        accent: "bg-palette-yellow-400",
+        accent: "text-on-neutral-dark bg-palette-yellow-400 hover:bg-palette-yellow-500 focus:ring-palette-yellow-400 dark:hover:text-on-neutral-light dark:bg-palette-yellow-500 dark:hover:bg-palette-yellow-600 dark:focus:ring-palette-yellow-500",
       },
       size: {
         sm: "px-4 py-2 text-sm gap-2",
