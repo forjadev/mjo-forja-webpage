@@ -10,6 +10,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "text-on-primary-dark bg-surface-metal-dark hover:bg-surface-secondary-dark focus:ring-surface-metal-dark dark:text-on-primary-light dark:bg-surface-metal-light dark:hover:bg-surface-secondary-light dark:focus:ring-surface-metal-light",
+        neutral:
+          "text-on-neutral-dark bg-on-neutral-light hover:bg-surface-metal-light focus:ring-on-neutral-light dark:text-on-neutral-light dark:bg-surface-metal-dark dark:hover:bg-on-primary-light dark:focus:ring-surface-metal-dark",
       },
       size: {
         sm: "px-4 py-2 text-sm gap-2",
