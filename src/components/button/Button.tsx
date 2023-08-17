@@ -4,27 +4,103 @@ import { cva, VariantProps } from "class-variance-authority"
 import React from "react"
 
 const buttonVariants = cva(
-  "font-display inline-flex items-center justify-center font-bold rounded-md transition-all ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none transform active:scale-95",
+  [
+    // Structure
+    "font-display",
+    "font-bold",
+    "inline-flex",
+    "items-center",
+    "justify-center",
+    "rounded-md",
+    // Behaviour
+    "cursor-pointer",
+    "focus-visible:outline-none",
+    "focus-visible:ring-2",
+    "focus-visible:ring-offset-2",
+    "disabled:opacity-50",
+    "disabled:pointer-events-none",
+    // Animation
+    "transition-all",
+    "transform",
+    "ease-out",
+    "active:scale-95",
+  ],
   {
     variants: {
       variant: {
-        default:
-          "text-on-primary-dark bg-surface-metal-dark hover:bg-surface-secondary-dark focus:ring-surface-metal-dark dark:text-on-primary-light dark:bg-surface-metal-light dark:hover:bg-surface-secondary-light dark:focus:ring-surface-metal-light",
-        neutral:
-          "text-on-neutral-dark bg-on-neutral-light hover:bg-surface-metal-light focus:ring-on-neutral-light dark:text-on-neutral-light dark:bg-surface-metal-dark dark:hover:bg-on-primary-light dark:focus:ring-surface-metal-dark",
-        ghost:
-          "text-on-neutral-dark bg-transparent hover:bg-surface-primary-dark hover:bg-opacity-10 focus:ring-surface-primary-dark/10 dark:text-on-neutral-light dark:hover:bg-surface-primary-light dark:hover:bg-opacity-10 dark:focus:ring-surface-primary-light/10",
-        primary:
-          "text-on-primary-light bg-palette-cyan-300 hover:bg-palette-cyan-400 focus:ring-palette-cyan-300",
-        secondary:
-          "text-on-neutral-dark bg-palette-purple-400 hover:bg-palette-purple-500 focus:ring-palette-purple-400 dark:text-on-neutral-light dark:bg-palette-purple-500 dark:hover:bg-palette-purple-600 dark:focus:ring-palette-purple-500",
-        accent:
-          "text-on-neutral-dark bg-palette-yellow-400 hover:bg-palette-yellow-500 focus:ring-palette-yellow-400 dark:hover:text-on-neutral-light dark:bg-palette-yellow-500 dark:hover:bg-palette-yellow-600 dark:focus:ring-palette-yellow-500",
+        default: [
+          // Light Theme
+          "text-on-primary-dark",
+          "bg-surface-metal-dark",
+          "hover:bg-surface-secondary-dark",
+          "focus:ring-surface-metal-dark",
+          // Dark Theme
+          "dark:text-on-primary-light",
+          "dark:bg-surface-metal-light",
+          "dark:hover:bg-surface-secondary-light",
+          "dark:focus:ring-surface-metal-light",
+        ],
+        neutral: [
+          // Light Theme
+          "text-on-neutral-dark",
+          "bg-on-neutral-light",
+          "hover:bg-surface-metal-light",
+          "focus:ring-on-neutral-light",
+          // Dark Theme
+          "dark:text-on-neutral-light",
+          "dark:bg-surface-metal-dark",
+          "dark:hover:bg-on-primary-light",
+          "dark:focus:ring-surface-metal-dark",
+        ],
+        ghost: [
+          // Light Theme
+          "text-on-neutral-dark",
+          "bg-transparent",
+          "hover:bg-surface-primary-dark",
+          "hover:bg-opacity-10",
+          "focus:ring-surface-primary-dark/10",
+          // Dark Theme
+          "dark:text-on-neutral-light",
+          "dark:hover:bg-surface-primary-light",
+          "dark:hover:bg-opacity-10",
+          "dark:focus:ring-surface-primary-light/10",
+        ],
+        primary: [
+          // Both Themes
+          "text-on-primary-light",
+          "bg-palette-cyan-300",
+          "hover:bg-palette-cyan-400",
+          "focus:ring-palette-cyan-300",
+        ],
+        secondary: [
+          // Light Theme
+          "text-on-neutral-dark",
+          "bg-palette-purple-400",
+          "hover:bg-palette-purple-500",
+          "focus:ring-palette-purple-400",
+          // Dark Theme
+          "dark:text-on-neutral-light",
+          "dark:bg-palette-purple-500",
+          "dark:hover:bg-palette-purple-600",
+          "dark:focus:ring-palette-purple-500",
+        ],
+        accent: [
+          // Light Theme
+          "text-on-neutral-dark",
+          "bg-palette-yellow-400",
+          "hover:bg-palette-yellow-500",
+          "focus:ring-palette-yellow-400",
+          // Dark Theme
+          "dark:hover:text-on-neutral-light",
+          "dark:bg-palette-yellow-500",
+          "dark:hover:bg-palette-yellow-600",
+          "dark:focus:ring-palette-yellow-500",
+        ],
       },
       size: {
-        sm: "px-4 py-2 text-sm gap-2",
-        md: "px-6 py-3 text-lg gap-3",
-        lg: "px-8 py-4 text-2xl gap-4",
+        sm: ["px-4", "py-2", "text-sm", "gap-2"],
+        md: ["px-6", "py-3", "text-lg", "gap-3"],
+        lg: ["px-8", "py-4", "text-2xl", "gap-4"],
       },
       outline: {
         true: ["bg-transparent", "border-2", "dark:bg-transparent"],
