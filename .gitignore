@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+yarn.lock
 
 # we'll ignore the lockfiles until a stable release is made
 yarn.lock
