@@ -12,6 +12,8 @@ const buttonVariants = cva(
     "items-center",
     "justify-center",
     "rounded-md",
+    "border-2",
+    "border-transparent",
     // Behaviour
     "cursor-pointer",
     "focus-visible:outline-none",
