@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/react"
+import { Meta, StoryFn, StoryObj } from "@storybook/react"
 import React from "react"
 import { Button, ButtonProps } from "./Button"
 
@@ -13,7 +13,7 @@ export default {
       control: {
         type: "select",
       },
-      table: { defaultValue: { summary: "callers" } },
+      table: { defaultValue: { summary: "default" } },
     },
     children: {
       name: "content",
@@ -30,40 +30,51 @@ export default {
       control: {
         type: "radio",
       },
-      table: { defaultValue: { summary: "lg" } },
+      table: { defaultValue: { summary: "md" } },
     },
   },
   args: {
     children: "Button",
-    variant: "callers",
-    size: "lg",
+    variant: "default",
+    size: "md",
   },
 } as Meta
 
 const Template: StoryFn<ButtonProps> = (args) => (
   <Button {...args}>{args.children}</Button>
 )
+type Story = StoryObj<typeof Button>
 
 export const Default = Template.bind({})
 Default.args = {
-  variant: "callers",
+  variant: "default",
 }
-
-export const Callers = Template.bind({})
-Callers.args = {
-  variant: "callers",
-  children: "Callers",
+export const Variants: Story = {
+  render: (args) => (
+    <div className="flex gap-2">
+      <Button {...args} variant="default">
+        Default
+      </Button>
+      <Button {...args} variant="neutral">
+        Neutral
+      </Button>
+      <Button {...args} variant="primary">
+        Primary
+      </Button>
+      <Button {...args} variant="secondary">
+        Secondary
+      </Button>
+      <Button {...args} variant="accent">
+        Accent
+      </Button>
+      <Button {...args} variant="ghost">
+        Ghost
+      </Button>
+    </div>
+  ),
+  args: {
+    size: "md",
+    variant: "primary",
+  },
+  argTypes: {},
 }
-
-export const Info = Template.bind({})
-Info.args = {
-  variant: "info",
-  children: "Info",
-}
-export const Sizes = () => (
-  <div className="flex gap-4 items-center">
-    <Info size="sm">Small</Info>
-    <Info size="md">Medium</Info>
-    <Info size="lg">Large</Info>
-  </div>
-)
