@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-type ContentCardProps = {
+export type ContentCardProps = {
   imgSrc?: string;
   title: string;
   description: string;
