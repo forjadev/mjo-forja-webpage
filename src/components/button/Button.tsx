@@ -136,6 +136,38 @@ const buttonVariants = cva(
           "dark:hover:bg-palette-cyan-300",
         ],
       },
+      {
+        variant: "secondary",
+        outline: true,
+        class: [
+          // Light Theme
+          "border-palette-purple-600",
+          "text-palette-purple-600",
+          "hover:text-on-primary-dark",
+          "hover:bg-palette-purple-600",
+          // Dark Theme
+          "dark:text-palette-purple-400",
+          "dark:border-palette-purple-400",
+          "dark:hover:bg-palette-purple-400",
+          "dark:hover:text-on-primary-light",
+        ],
+      },
+      {
+        variant: "accent",
+        outline: true,
+        class: [
+          // Light Theme
+          "border-palette-yellow-500",
+          "text-palette-yellow-500",
+          "hover:text-on-primary-dark",
+          "hover:bg-palette-yellow-500",
+          // Dark Theme
+          "dark:text-palette-yellow-400",
+          "dark:border-palette-yellow-400",
+          "dark:hover:bg-palette-yellow-400",
+          "dark:hover:text-on-primary-light",
+        ],
+      },
     ],
   },
 )
