@@ -12,7 +12,7 @@ const ContentCard = ({ imgSrc = '/images/contentCardDefault.png', title, descrip
   return (
     <div 
       className="
-      w-72 max-w-[281px] h-auto min-h-[387px] md:w-[28rem] md:max-w-[450px] md:min-h-[477px] 
+      w-72 h-auto min-h-[387px] md:w-[450px] md:min-h-[477px] 
       rounded-lg border-2 overflow-hidden
     border-surface-metal-dark bg-surface-secondary-dark dark:border-surface-metal-light dark:bg-surface-secondary-light"
     >
