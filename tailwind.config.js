@@ -34,7 +34,7 @@ module.exports = {
           },
           neutral: {
             dark: '#202036',
-            light: '#EFF2F8',
+            light: '#E1E5EA',
           },
         },
         palette: {
