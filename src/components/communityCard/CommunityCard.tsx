@@ -9,16 +9,16 @@ interface CardProps {
 const CommunityCard: React.FC<CardProps> = ({ icon, title, paragraph }) => {
   return (
       <div
-        className='bg-surface-secondary-dark p-[32px] w-[364px] h-[314px] rounded-[8px] border border-palette-green-800/50'
+        className='bg-surface-secondary-light dark:bg-surface-secondary-dark p-[32px] w-[364px] h-[314px] rounded-[8px] border border-palette-blue-500/40 dark:border-palette-green-800/50'
       >
 
         <Image src={icon} alt='image' width={64} height={64}/>
 
-        <h1 className='mt-8 text-palette-cyan-400 text-[32px] font-bold leading-8'>
+        <h1 className='mt-8 text-palette-blue-600 dark:text-palette-cyan-400 text-[32px] font-bold leading-8'>
           {title}
         </h1>
 
-        <p className='mt-2 text-base text-on-primary-dark leading-4'>
+        <p className='mt-2 text-base text-on-secondary-light dark:text-on-primary-dark leading-4'>
           {paragraph}
         </p>
       </div>

@@ -2,7 +2,7 @@ import { CommunityCard } from "@/components";
 
 export default function Home() {
   return (
-    <div className="bg-surface-primary-dark h-screen flex justify-center items-center gap-14">
+    <div className="bg-surface-primary-light dark:bg-surface-primary-dark h-screen flex justify-center items-center gap-14">
       <CommunityCard
         icon="/group.svg"
         title="Ambiente"
