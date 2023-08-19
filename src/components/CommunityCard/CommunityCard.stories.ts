@@ -4,11 +4,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta = {
   title: 'Example/CommunityCard',
   component: CommunityCard,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'fullscreen',
+    layout: 'centered',
   },
 } satisfies Meta<typeof CommunityCard>;
 
@@ -22,7 +20,6 @@ export const Primary: Story = {
     paragraph: 'Espaço dedicado à comunidade de desenvolvedores, onde pessoas de diferentes níveis podem se conectar e encontrar apoio mútuo.'
   },
 };
-
 
 export const Secondary: Story = {
   args: {
