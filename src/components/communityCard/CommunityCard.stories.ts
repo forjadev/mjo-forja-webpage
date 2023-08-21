@@ -2,7 +2,6 @@ import CommunityCard from './CommunityCard';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Example/CommunityCard',
   component: CommunityCard,
   tags: ['autodocs'],
   parameters: {
