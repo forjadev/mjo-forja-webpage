@@ -1,43 +1,81 @@
-import { cn } from "../../lib/utils";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { cva, VariantProps } from "class-variance-authority";
+"use client"
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
+import { usePathname } from "next/navigation";
+import { cva, VariantProps } from "class-variance-authority";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { NavigationMenuItem, NavigationMenuLink } from "./NavIgationPrimitives";
 
-export interface NavItemProps extends VariantProps<typeof navItemVariants> {
-  textPrimary: string;
-  textSecondary?: string;
+export interface NavItemProps extends VariantProps<typeof navItemVariants>, NavigationMenu.NavigationMenuLinkProps {
   href: string;
 }
 
 const navItemVariants = cva(
-  "text-xl text-on-primary capitalize px-[0.875rem] py-2 cursor-pointer hover:opacity-80",
+  [
+    "relative",
+    "group",
+    "inline-flex",
+    "items-center",
+    "justify-center",
+    "whitespace-nowrap",
+    "text-xl",
+    "font-body",
+    "capitalize",
+    "text-on-secondary-light",
+    "dark:text-on-secondary-dark",
+    "hover:text-on-primary-light",
+    "dark:hover:text-on-primary-dark",
+    "disabled:pointer-events-none",
+    "disabled:opacity-50 ",
+    "cursor-pointer",
+  ],
   {
     variants: {
-      variant: {
-        isActive:
-          "text-surface-primary font-bold rounded-full bg-gradient-to-br from-dev-primary to-dev-secondary",
+      isActive: {
+        true:
+          [
+            "transition-colors",
+            "focus:outline-none", 
+            "focus:text-on-primary-light",
+            "dark:focus:text-on-primary-dark",
+            "text-on-primary-light",
+            "dark:text-on-primary-dark",
+            "hover:text-on-secondary-light",
+            "dark:hover:text-on-secondary-dark",
+            "before:absolute",
+            "before:w-full",
+            "before:h-px",
+            "before:rounded-full",
+            "before:-bottom-4",
+            "before:bg-surface-primary-dark",
+            "dark:before:bg-surface-primary-light",
+            "hover:before:bg-on-secondary-light",
+            "dark:hover:before:bg-on-secondary-dark",
+          ],
       },
     },
   }
 );
 
 export const NavItem = forwardRef<HTMLAnchorElement, NavItemProps>(
-  ({ textPrimary = "Default", textSecondary, variant, href }, ref) => {
+  ({ children, className, isActive, href, ...props }, ref) => {
+    const pathname = usePathname()
+    const activeLink = pathname === href
+
     return (
-      <NavigationMenu.Item>
-        <NavigationMenu.Link
-          className={cn(navItemVariants({ variant }))}
-          href={href}
+
+      <NavigationMenuItem>
+        <NavigationMenuLink
+          className={cn(navItemVariants({ isActive: activeLink || isActive, className }))}
           ref={ref}
+          asChild
+          active={activeLink}
+          {...props}
         >
-          {textPrimary}
-          {textSecondary && (
-            <span className="text-[#FF8139] font-bold uppercase pl-1">
-              {textSecondary}
-            </span>
-          )}
-        </NavigationMenu.Link>
-      </NavigationMenu.Item>
+          <Link href={href}>{children}</Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem >
     );
   }
 );

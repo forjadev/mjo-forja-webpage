@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import type { Preview } from "@storybook/react"
 import "../src/app/globals.css"
 import { DocsContainer } from "./docsContainer"
 import { darkTheme, lightTheme } from "./themes"
-=======
-import "../src/app/globals.css"
-import type { Preview } from "@storybook/react";
->>>>>>> a405879 (feat: create Navbar stories component)
 
 const preview: Preview = {
   parameters: {

@@ -1,34 +1,24 @@
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { NavItem, NavItemProps } from "./NavItem";
+import { NavItem } from "./NavItem";
+import { NavigationMenu, NavigationMenuList } from "./NavIgationPrimitives";
 
-const menuitems: NavItemProps[] = [
-  {
-    textPrimary: "Inicio",
-    href: "#",
-    variant: "isActive",
-  },
-  {
-    textPrimary: "Sobre",
-    href: "#",
-  },
-];
-
-const Navbar = () => {
+// change the href when implementing this
+export const Navbar = ({className}: {className?: string}) => {
   return (
-    <NavigationMenu.Root className="px-4 py-4 border border-metal-light rounded-full bg-surface-secondary-light/80 dark:bg-surface-secondary/50 shadow-lg shadow-[#45A6AA]/5">
-      <NavigationMenu.List className="flex gap-10">
-        {menuitems.map((item) => (
-          <NavItem
-            key={item.href}
-            textPrimary={item.textPrimary}
-            textSecondary={item.textSecondary}
-            href={item.href}
-            variant={item.variant}
-          />
-        ))}
-      </NavigationMenu.List>
-    </NavigationMenu.Root>
+    <NavigationMenu className={className}>
+      <NavigationMenuList className="gap-10">
+          <NavItem href="/">
+            Início
+          </NavItem>
+          <NavItem href="/about">
+            Sobre
+          </NavItem>
+          <NavItem href="/conteudos">
+            Conteúdos
+          </NavItem>
+          <NavItem href="/pro">
+            Seja <span className="font-bold text-palette-orange-500 whitespace-pre"> PRO</span>
+          </NavItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 };
-
-export default Navbar;
