@@ -25,7 +25,7 @@ const menuitems: { text: string, href: string, active?: boolean }[] = [
     href: "/conteudo",
   },
   {
-    text: "Seja PRO",
+    text: "Forja PRO",
     href: "/pro",
   }
 ]

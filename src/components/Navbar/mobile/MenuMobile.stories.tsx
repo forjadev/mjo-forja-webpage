@@ -83,7 +83,7 @@ MenuMobile.args = {
         <MobileLink href="/conteudo">Conteúdo</MobileLink>
       </DropdownMenuItem>
       <DropdownMenuItem asChild>
-        <MobileLink href="/pro">Seja PRO</MobileLink>
+        <MobileLink href="/pro">Forja PRO</MobileLink>
       </DropdownMenuItem>
     </>
   ),

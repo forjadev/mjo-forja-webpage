@@ -16,7 +16,7 @@ export const Navbar = ({className}: {className?: string}) => {
             Conteúdos
           </NavItem>
           <NavItem href="/pro">
-            Seja <span className="font-bold text-palette-orange-500 whitespace-pre"> PRO</span>
+            Forja <span className="font-bold text-palette-orange-500 whitespace-pre"> PRO</span>
           </NavItem>
       </NavigationMenuList>
     </NavigationMenu>

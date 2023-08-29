@@ -9,7 +9,22 @@ export default {
   component: MobileLink,
   parameters: {
     layout: 'centered',
-    controls: { sort: 'alpha' },
+    controls: { 
+      sort: 'alpha', 
+      exclude: [
+        'as', 
+        'replace', 
+        'scroll', 
+        'shallow', 
+        'passHref', 
+        'prefetch', 
+        'locale', 
+        'legacyBehavior',
+        'onMouseEnter',
+        'onTouchStart',
+        'onClick',
+      ] 
+    },
   },
   tags: ['autodocs'], 
   argTypes: {    
