@@ -1,5 +1,3 @@
-"use client"
-
 import {} from "@/components"
 
 export default function Home() {
