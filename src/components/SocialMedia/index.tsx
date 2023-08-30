@@ -25,7 +25,7 @@ export default function SocialMedia() {
           />
       </a>
 
-      <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A96180319&keywords=forja&origin=RICH_QUERY_SUGGESTION&position=0&searchId=1f685f01-2f1a-4c0e-9f46-dd4a00471d77&sid=(%3Ag" target="_black">
+      <a href="https://www.linkedin.com/company/forjadev/mycompany/" target="_black">
         <FaLinkedin
           size={24}
           className="text-surface-secondary-dark dark:text-surface-secondary-light"
