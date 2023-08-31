@@ -1,7 +1,7 @@
-import type { Preview } from "@storybook/react"
-import "../src/app/globals.css"
-import { DocsContainer } from "./docsContainer"
-import { darkTheme, lightTheme } from "./themes"
+import type { Preview } from "@storybook/react";
+import "../src/app/globals.css";
+import { DocsContainer } from "./docsContainer";
+import { darkTheme, lightTheme } from "./themes";
 
 const preview: Preview = {
   parameters: {
@@ -25,6 +25,6 @@ const preview: Preview = {
       classTarget: "html",
     },
   },
-}
+};
 
-export default preview
+export default preview;
